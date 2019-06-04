@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+h3 {
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+h2 {
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.form-horizontal {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.panel {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.panel-body {
+    padding: 5%;
+}
+
+.btn {
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+#about {
+    padding: 5%;
+    background-color: rgb(242, 222, 222);
+}

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Gothic&display=swap" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'index' %}">home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{% url 'about' %}">about <span class="sr-only">(current)</span></a></li>
+            </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+        </nav>
+        <h1>
+            {% if top_val > 76 %}
+                축하합니다! 링딩동을 이겼습니다!
+            {% else %}
+                아쉽게도 졌네요ㅠㅠ
+            {% endif %}
+        </h1>
+        <br>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h2 class="panel-title">Ring-Ding-Dong</h2>
+            </div>
+            <div class="panel-body">
+                링딩동에서 <strong>'딩'</strong>은
+                <strong>76</strong>회 반복되었습니다.
+            </div>
+        </div>
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h2 class="panel-title">{{ title }}</h2>
+            </div>
+            <div class="panel-body">
+                입력된 가사에서 <Strong>'{{ top_word }}'</Strong>은
+                <strong>{{ top_val }}</strong>회 반복되었습니다.
+            </div>            
+        </div>
+    </body>
+</html>
